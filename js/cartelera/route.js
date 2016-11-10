@@ -23,5 +23,5 @@ angular.module('myapp.cartelera')
 		}
 	});
 
-	$urlRouterProvider.otherwise('/cartelera');
+	//$urlRouterProvider.otherwise('/cartelera');
 }]);

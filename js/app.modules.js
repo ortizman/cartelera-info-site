@@ -8,7 +8,9 @@ angular.module('myapp', [
 	'ui.router',
 	'myapp.cartelera',
 	'LocalStorageModule',
-	'wu.masonry'
+	'wu.masonry',
+	'myapp.login'
 ]);
 
 angular.module('myapp.cartelera', []);
+angular.module('myapp.login', []);
