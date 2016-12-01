@@ -7,9 +7,13 @@
     <div class="col-md-offset-4 col-md-4">
       <div class="form-login">
         <h4>Autenticate!</h4>
-        <input type="text" id="userName" ng-model="username" class="form-control input-sm chat-input" placeholder="username" />
+
+        <div ng-if="loginErrorMessage" class="alert alert-danger" role="alert">
+          <small ng-bind="loginErrorMessage"></small>
+        </div>
+        <input type="text" id="userName" ng-model="username" class="form-control input-sm chat-input" placeholder="Login de Usuario" />
       </br>
-      <input type="text" id="userPassword" ng-model="password" class="form-control input-sm chat-input" placeholder="password" />
+      <input type="text" id="userPassword" ng-model="password" class="form-control input-sm chat-input" placeholder="Contraseña" />
       </br>
       <div class="wrapper">
         <span class="group-btn">

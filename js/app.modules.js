@@ -9,7 +9,8 @@ angular.module('myapp', [
 	'myapp.cartelera',
 	'LocalStorageModule',
 	'wu.masonry',
-	'myapp.login'
+	'myapp.login',
+	'myapp.environment'
 ]);
 
 angular.module('myapp.cartelera', []);

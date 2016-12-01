@@ -1,5 +1,5 @@
 angular.module('myapp.cartelera')
-.controller('CarteleraCtrl', ['$scope', 'CarteleraService', function($scope, CarteleraService){
+.controller('CarteleraCtrl', function($scope, $state, CarteleraService, LoginService){
 
 	var  imagenRandom = function () {
 		var height = ~~(Math.random() * 500) + 100;
@@ -15,8 +15,15 @@ angular.module('myapp.cartelera')
 		});
 	};
 
+	$scope.logout = function() {
+		LoginService.logout()
+		.then(function(){
+			$state.go('login');
+		});
+	};
+
 	$scope.anioActivo = 'primero';
 	//inicializo la cartelera con el primer año
   $scope.cargarCartelera($scope.anioActivo);
 
-}]);
+});
